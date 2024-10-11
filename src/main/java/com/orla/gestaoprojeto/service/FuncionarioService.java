@@ -5,10 +5,8 @@ import com.orla.gestaoprojeto.repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 @Service
 public class FuncionarioService {
@@ -25,5 +23,9 @@ public class FuncionarioService {
 
     public Optional<Funcionario> lerFuncionario(Long id) {
         return funcionarioRepository.findById(id);
+    }
+
+    public List<Funcionario> buscarFuncionariosPorNome(String nome) {
+        return funcionarioRepository.findByNomeContaining(nome);
     }
 }

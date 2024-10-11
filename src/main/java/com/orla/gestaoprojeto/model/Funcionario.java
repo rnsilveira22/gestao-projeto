@@ -14,7 +14,7 @@ public class Funcionario {
 
     private String nome;
 
-    private Integer cpf;
+    private long cpf;
 
     private String email;
     
@@ -27,6 +27,14 @@ public class Funcionario {
             inverseJoinColumns = @JoinColumn(name = "projeto_id"))
     private Set<Projeto> projetos = new HashSet<>();
 
+    public Funcionario(String nome) {
+        this.nome = nome;
+    }
+
+    public Funcionario() {
+
+    }
+
     public String getNome() {
         return nome;
     }
@@ -35,11 +43,11 @@ public class Funcionario {
         this.nome = nome;
     }
 
-    public Integer getCpf() {
+    public long getCpf() {
         return cpf;
     }
 
-    public void setCpf(Integer cpf) {
+    public void setCpf(long cpf) {
         this.cpf = cpf;
     }
 
