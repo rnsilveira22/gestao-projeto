@@ -24,3 +24,6 @@ API RESTful para gerenciar projetos e funcionários.
 spring.datasource.url=jdbc:postgresql://localhost:5432/seu_banco_de_dados
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
+```
+## Documentação Endpoint
+http://localhost:8080/v3/api-docs
